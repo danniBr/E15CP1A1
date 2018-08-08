@@ -1,0 +1,15 @@
+<h1>Iniciar sesion</h1>
+
+<%= form_with(model: @user, url: sessions_path, method: :post, local: true) do |form| %>
+	<div class="field">
+	 	<%= form.label :email %><br />
+	 	<%= form.text_field :email %>
+	 </div>
+	 <div class="field">
+	 	<%= form.label :password %><br />
+	 	<%= form.password_field :password %>
+	 </div>
+	 <div class="actions">
+	 	<%= form.submit "Sign Up" %>
+	 	</div>
+<% end %>
