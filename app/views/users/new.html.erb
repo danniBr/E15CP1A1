@@ -1,0 +1,20 @@
+<h1>Users#new</h1>
+<p>Find me in app/views/users/new.html.erb</p>
+
+<%= form_with(model: @user) do |form| %>
+	<div class="field">
+	 	<%= form.label :name %><br />
+	 	<%= form.text_field :name %>
+	 </div>
+	<div class="field">
+	 	<%= form.label :email %><br />
+	 	<%= form.text_field :email %>
+	 </div>
+	 <div class="field">
+	 	<%= form.label :password %><br />
+	 	<%= form.password_field :password %>
+	 </div>
+	 <div class="actions">
+	 	<%= form.submit "Sign Up" %>
+	 	</div>
+<% end %>
