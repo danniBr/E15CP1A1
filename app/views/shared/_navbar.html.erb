@@ -20,11 +20,11 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Usuario<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
           
-            <% if logged? %>
-            <li><%= link_to "salir", session_path(current_user), method: :delete %></li>
+            <% if user_signed_in? %>
+            <li><%= link_to "salir", destroy_user_session_path, method: :delete %></li>
             <% else %>
-            <li><%= link_to "Registrarse", users_sign_up_path %></li>
-            <li><%= link_to "Iniciar sesion", users_sign_in_path %></li>
+            <li><%= link_to "Registrarse", new_user_registration_path %></li>
+            <li><%= link_to "Iniciar sesion", new_user_session_path %></li>
             <% end %>
           </ul>
         </li>
